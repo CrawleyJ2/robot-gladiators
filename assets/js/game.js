@@ -156,7 +156,7 @@ var startGame = function () {
         else {
             window.alert ("You have lost your robot in battle! Game Over!");
         }
-    }
+    } 
     // after the loop ends, player is either out of health or enemies to fight, so run the endGame function
     endGame ();
 };
@@ -173,7 +173,7 @@ var endGame = function () {
 
     // if player has more money than the high score, player has new high score!
     if (playerInfo.money > highScore) {
-        localStorage.setItem ("highscore", playerInfo,money);
+        localStorage.setItem ("highscore", playerInfo.money);
         localStorage.setItem ("name", playerInfo.name);
 
         alert (playerInfo.name + " now has the high score of " + playerInfo.money + "!");
